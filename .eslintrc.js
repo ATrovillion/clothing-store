@@ -1,0 +1,28 @@
+module.exports = {
+  env: {
+    browser: true,
+    es2021: true
+  },
+  extends: [
+    'plugin:react/recommended',
+    'standard'
+  ],
+  overrides: [
+  ],
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module'
+  },
+  plugins: [
+    'react'
+  ],
+  rules: {
+    'no-useless-constructor': 'off',
+    'react/react-in-jsx-scope': 'off',
+    semi: [2, 'always'],
+    'no-unused-vars': 'warn',
+    'react/jsx-key': 'off',
+    'react/no-unescaped-entities': 'off',
+    'react/prop-types': 'off'
+  }
+};
