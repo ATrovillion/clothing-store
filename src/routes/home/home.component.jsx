@@ -1,3 +1,5 @@
+import { Outlet } from 'react-router-dom';
+
 import CategoryMenu from '../../components/category-menu/category-menu.component';
 
 import '../../categories.styles.scss';
@@ -32,7 +34,10 @@ const Home = () => {
   ];
 
   return (
-    <CategoryMenu categories={categories}/>
+    <div>
+      <Outlet />
+      <CategoryMenu categories={categories}/>
+    </div>
   );
 };
 

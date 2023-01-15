@@ -4,14 +4,16 @@ module.exports = {
     es2021: true
   },
   extends: [
-    'plugin:react/recommended',
     'standard'
   ],
   overrides: [
   ],
   parserOptions: {
     ecmaVersion: 'latest',
-    sourceType: 'module'
+    sourceType: 'module',
+    ecmaFeatures: {
+      jsx: true
+    }
   },
   plugins: [
     'react'
@@ -20,9 +22,12 @@ module.exports = {
     'no-useless-constructor': 'off',
     'react/react-in-jsx-scope': 'off',
     semi: [2, 'always'],
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
     'react/jsx-key': 'off',
     'react/no-unescaped-entities': 'off',
-    'react/prop-types': 'off'
+    'react/prop-types': 'off',
+    indent: 'off',
+    'no-tabs': 'off',
+    'comma-dangle': 'off'
   }
 };
