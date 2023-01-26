@@ -28,6 +28,7 @@ module.exports = {
     'react/prop-types': 'off',
     indent: 'off',
     'no-tabs': 'off',
-    'comma-dangle': 'off'
+    'comma-dangle': 'off',
+    'multiline-ternary': 'off'
   }
 };
