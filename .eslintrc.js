@@ -29,6 +29,7 @@ module.exports = {
     indent: 'off',
     'no-tabs': 'off',
     'comma-dangle': 'off',
-    'multiline-ternary': 'off'
+    'multiline-ternary': 'off',
+
   }
 };

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { useDispatch } from 'react-redux';
 import { createUserWithEmailAndPassword } from 'firebase/auth';
 import {
 	createAuthUserWithEmailAndPassword,
@@ -9,7 +9,7 @@ import {
 import FormInput from '../form-input/form-input.component';
 import Button, { BUTTON_TYPE_CLASSES } from '../button/button.component';
 import { SignUpContainer } from './sign-up-form.styles';
-
+import { signUpStart } from '../../store/user/user.action';
 const defaultformFields = {
 	displayName: '',
 	email: '',
@@ -20,6 +20,7 @@ const defaultformFields = {
 const SignUpForm = () => {
 	const [formFields, setFormFields] = useState(defaultformFields);
 	const { displayName, email, password, confirmPassword } = formFields;
+	const dispatch = useDispatch();
 
 	const resetFormFields = () => {
 		setFormFields(defaultformFields);
@@ -36,12 +37,7 @@ const SignUpForm = () => {
 		}
 
 		try {
-			const { user } = await createAuthUserWithEmailAndPassword(
-				email,
-				password
-			);
-
-			await createUserDocumentFromAuth(user, { displayName });
+			dispatch(signUpStart(email, password, displayName));
 			resetFormFields();
 		} catch (error) {
 			console.error(error);

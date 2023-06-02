@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "html.format.contentUnformatted": "",
+  "html.format.indentInnerHtml": true,
+  "html.format.wrapLineLength": 80,
+  "javascript.format.enable": true,
+  "javascript.format.semicolons": "insert",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.singleAttributePerLine": true,
+  "prettier.endOfLine": "auto",
+  "prettier.useTabs": true,
+  "editor.wordWrap": "on"
+}
